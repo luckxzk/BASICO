@@ -1,0 +1,151 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to right, #f0f4ff, #e0e7ff);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  animation: fadeIn 0.6s ease;
+}
+
+h1 {
+  margin: 0;
+  color: #333;
+  font-size: 28px;
+}
+
+.sub {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.add-task {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.add-task input,
+.add-task select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  flex: 1;
+  min-width: 160px;
+  transition: all 0.2s ease;
+}
+
+.add-task input:focus,
+.add-task select:focus {
+  border-color: #4e4edc;
+  outline: none;
+}
+
+.add-task button {
+  background: #4e4edc;
+  color: white;
+  border: none;
+  padding: 0 16px;
+  font-size: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-task button:hover {
+  background: #3e3ecc;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.filters button {
+  border: none;
+  background: #f1f1f1;
+  padding: 6px 12px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.filters button.active,
+.filters button:hover {
+  background: #4e4edc;
+  color: white;
+}
+
+.stats {
+  text-align: right;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-list li {
+  background: #fafafa;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 6px solid #4e4edc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.task-list li.done {
+  background: #e1ffe1;
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.task-list .meta {
+  font-size: 12px;
+  color: #666;
+}
+
+.task-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.task-buttons button {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.task-buttons button:hover {
+  transform: scale(1.1);
+}
+
+.task-buttons .delete-btn {
+  color: crimson;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px);}
+  to {opacity: 1; transform: translateY(0);}
+}

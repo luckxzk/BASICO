@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lista de Tarefas</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1> App De Rotina Da Juliane</h1>
+    <p class="sub">Organize seu dia com estilo e produtividade</p>
+
+    <div class="add-task">
+      <input type="text" id="taskInput" placeholder="Nova tarefa..."/>
+      <select id="categorySelect">
+        <option value="Trabalho">Trabalho</option>
+        <option value="Pessoal">Pessoal</option>
+        <option value="Reuniões">Reuniões</option>
+        <option value="Outros">Outros</option>
+      </select>
+      <select id="prioritySelect">
+        <option value="Alta">Alta</option>
+        <option value="Média">Média</option>
+        <option value="Baixa">Baixa</option>
+      </select>
+      <button onclick="addTask()">➕</button>
+    </div>
+
+    <div class="filters">
+      <span>Filtrar:</span>
+      <button onclick="filterTasks('Todas')" id="filterTodas" class="active">Todas</button>
+      <button onclick="filterTasks('Trabalho')" id="filterTrabalho">Trabalho</button>
+      <button onclick="filterTasks('Pessoal')" id="filterPessoal">Pessoal</button>
+      <button onclick="filterTasks('Reuniões')" id="filterReuniões">Reuniões</button>
+      <button onclick="filterTasks('Outros')" id="filterOutros">Outros</button>
+    </div>
+
+    <div class="stats">
+      <span id="counter">0 tarefas | 0 concluídas</span>
+    </div>
+
+    <ul id="taskList" class="task-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
